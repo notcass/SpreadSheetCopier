@@ -4,18 +4,17 @@ package main;
 import java.io.File;
 
 
-@SuppressWarnings("ALL")
 public class Rename {
-    private int fullYear;
-    private int year;
-    private File rootFolder;
+    private final int fullYear;
+    private String year;
+    private final File rootFolder;
     private File[] monthFolders;
 
 
 
     public Rename(String rootFolder, int fullYear) {
 
-        this.rootFolder = new File(rootFolder + "\\Audit");
+        this.rootFolder = new File(rootFolder + "\\Audit " + fullYear);
         this.monthFolders = this.rootFolder.listFiles();
 
         // Validation of year
@@ -27,24 +26,11 @@ public class Rename {
             // Getting last 2 digits of the year for use later
             String fullYearToString = String.valueOf(this.fullYear);
             int startInd = fullYearToString.length() - 2;
-            String fullYearToStringYear = fullYearToString.substring(startInd);
-            this.year = Integer.parseInt(fullYearToStringYear);
+            this.year = fullYearToString.substring(startInd);
+
         }
 
     }
-
-
-    public void testThings() {
-//        System.out.println(rootFolder);
-//        System.out.println("There are " + monthFolders.length + " folders in root folder.");
-//
-//        System.out.println(monthFolders[0].toString().length());
-//        System.out.println(monthFolders[0].toString());
-
-
-        rootFolder.renameTo(new File(rootFolder.toString() + " " + fullYear));
-    }
-
 
 
     public void main() {
@@ -52,23 +38,19 @@ public class Rename {
         for(int i = 0; i < monthFolders.length ; i++) {
             this.monthFolders = this.rootFolder.listFiles();
             File[] days = monthFolders[i].listFiles();
+            String monthName;
 
 
 
             // JANUARY
             if(monthFolders[i].toString().contains("JAN")) {
-                String monthName = "JAN\\";
-                String monthNum = "01-";
-                if(monthFolders[i].toString().contains("1")) {
-                    monthName = "1 JAN\\";
-                }
-
+                monthName = "1 JAN " + fullYear + "\\01-";
 
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
                     } else if (j < 40) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
 
@@ -78,20 +60,13 @@ public class Rename {
 
             // FEBRUARY
             if (monthFolders[i].toString().contains("FEB")) {
-                String monthName = "FEB\\";
-                String monthNum = "02-";
-
-                if(monthFolders[i].toString().contains("2")) {
-                    monthName = "2 FEB\\";
-
-                }
-
+                monthName = "2 FEB " + fullYear + "\\02-";
 
                 for (int j = 0; j < days.length; j++) {
                     if (j < 9) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
                     } else if (j < 40) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
 
@@ -102,18 +77,13 @@ public class Rename {
 
             // MARCH
             if (monthFolders[i].toString().contains("MAR")) {
-                String monthName = "MAR\\";
-                String monthNum = "03-";
-
-                if(monthFolders[i].toString().contains("3")) {
-                    monthName = "3 MAR\\";
-                }
+                monthName = "3 MAR " + fullYear + "\\03-";
 
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
                     } else if (j < 40) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
 
@@ -124,18 +94,13 @@ public class Rename {
 
             // APRIL
             if (monthFolders[i].toString().contains("APR")) {
-                String monthName = "APR\\";
-                String monthNum = "04-";
-
-                if(monthFolders[i].toString().contains("4")) {
-                    monthName = "4 APR\\";
-                }
+                monthName = "4 APR " + fullYear + "\\04-";
 
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
                     } else if (j < 40) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
 
@@ -146,18 +111,13 @@ public class Rename {
 
             // MAY
             if (monthFolders[i].toString().contains("MAY")) {
-                String monthName = "MAY\\";
-                String monthNum = "05-";
-
-                if(monthFolders[i].toString().contains("5")) {
-                    monthName = "5 MAY\\";
-                }
+                monthName = "5 MAY " + fullYear + "\\05-";
 
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
                     } else if (j < 40) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
 
@@ -168,18 +128,13 @@ public class Rename {
 
             // JUNE
             if (monthFolders[i].toString().contains("JUN")) {
-                String monthName = "JUN\\";
-                String monthNum = "06-";
-
-                if(monthFolders[i].toString().contains("6")) {
-                    monthName = "6 JUN\\";
-                }
+                monthName = "6 JUN " + fullYear + "\\06-";
 
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
                     } else if (j < 40) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
 
@@ -191,18 +146,13 @@ public class Rename {
 
             // JULY
             if (monthFolders[i].toString().contains("JUL")) {
-                String monthName = "JUL\\";
-                String monthNum = "07-";
-
-                if(monthFolders[i].toString().contains("7")) {
-                    monthName = "7 JUL\\";
-                }
+                monthName = "7 JUL " + fullYear + "\\07-";
 
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
                     } else if (j < 40) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
 
@@ -213,18 +163,13 @@ public class Rename {
 
             // AUGUST
             if (monthFolders[i].toString().contains("AUG")) {
-                String monthName = "AUG\\";
-                String monthNum = "08-";
-
-                if(monthFolders[i].toString().contains("8")) {
-                    monthName = "8 AUG\\";
-                }
+                monthName = "8 AUG " + fullYear + "\\08-";
 
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
                     } else if (j < 40) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
 
@@ -235,18 +180,13 @@ public class Rename {
 
             // SEPTEMBER
             if (monthFolders[i].toString().contains("SEP")) {
-                String monthName = "SEP\\";
-                String monthNum = "09-";
-
-                if(monthFolders[i].toString().contains("9")) {
-                    monthName = "9 SEP\\";
-                }
+                monthName = "9 SEP " + fullYear + "\\09-";
 
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
                     } else if (j < 40) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
 
@@ -257,18 +197,13 @@ public class Rename {
 
             // OCTOBER
             if (monthFolders[i].toString().contains("OCT")) {
-                String monthName = "OCT\\";
-                String monthNum = "10-";
-
-                if(monthFolders[i].toString().contains("10")) {
-                    monthName = "10 OCT\\";
-                }
+                monthName = "10 OCT " + fullYear + "\\10-";
 
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
                     } else if (j < 40) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
 
@@ -279,18 +214,13 @@ public class Rename {
 
             // NOVEMBER
             if (monthFolders[i].toString().contains("NOV")) {
-                String monthName = "NOV\\";
-                String monthNum = "11-";
-
-                if(monthFolders[i].toString().contains("11")) {
-                    monthName = "11 NOV\\";
-                }
+                monthName = "11 NOV " + fullYear + "\\11-";
 
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
                     } else if (j < 40) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
 
@@ -302,18 +232,13 @@ public class Rename {
 
             // DECEMBER
             if (monthFolders[i].toString().contains("DEC")) {
-                String monthName = "DEC\\";
-                String monthNum = "12-";
-
-                if(monthFolders[i].toString().contains("12")) {
-                    monthName = "12 DEC\\";
-                }
+                monthName = "12 DEC " + fullYear + "\\12-";
 
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
                     } else if (j < 40) {
-                        days[j].renameTo(new File(rootFolder + "\\" + monthName + monthNum + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
+                        days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
 
@@ -325,8 +250,6 @@ public class Rename {
 
 
         }
-
-
 
     }
 

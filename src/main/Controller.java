@@ -1,14 +1,7 @@
 package main;
 
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-import javafx.scene.Node;
-
-import java.io.IOException;
 
 
 public class Controller {
@@ -18,31 +11,16 @@ public class Controller {
 
 
 
-    public void runProgramThenClose(javafx.event.ActionEvent actionEvent) throws IOException {
+    public void runProgramThenClose() {
 
 
-        // Make directories and copy files
-        int fullYearInt = Integer.parseInt(fullYear.getText());
-        main.Copy copy = new main.Copy(rootFolder.getText(), fullYearInt);
+        main.Copy copy = new main.Copy(rootFolder.getText(), fullYear.getText());
         copy.mkDirs();
         copy.copyFiles();
 
-        // Rename files
+        int fullYearInt = Integer.parseInt(fullYear.getText());
         main.Rename rename = new main.Rename(rootFolder.getText(), fullYearInt);
         rename.main();
-
-
-        // Switch scene to Done
-        Parent view2 = FXMLLoader.load(getClass().getResource("done.fxml"));
-        Scene scene2 = new Scene(view2);
-        Stage window = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
-        window.setScene(scene2);
-        window.show();
-
-
-
-
-
 
     }
 }
