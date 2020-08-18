@@ -1,6 +1,7 @@
 package main;
 
 
+import org.apache.commons.io.IOUtils;
 import java.io.*;
 import java.nio.file.*;
 
@@ -58,7 +59,7 @@ public class Copy {
             InputStream template = getClass().getClassLoader().getResourceAsStream("template.xls");
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
 
-            org.apache.commons.io.IOUtils.copy(template, baos);
+            IOUtils.copy(template, baos);
             byte[] bytes = baos.toByteArray();
 
 
