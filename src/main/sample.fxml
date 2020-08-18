@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane hgap="10" prefWidth="527.0" vgap="10" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Controller">
+    <padding>
+        <Insets bottom="15" left="15" right="15" top="15" />
+    </padding>
+
+    <VBox prefHeight="181.0" prefWidth="508.0">
+
+
+        <Label style="-fx-font-weight:bold; -fx-font-size:25px;" text="Spreadsheet Copier" GridPane.columnIndex="0" GridPane.rowIndex="0">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Label>
+        <Label text="1. Choose a folder somewhere on the computer." GridPane.columnIndex="0" GridPane.rowIndex="1">
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+        <Label text="2. Copy the location of that folder, e.g., C:\Users\John\Desktop\Audits" GridPane.columnIndex="0" GridPane.rowIndex="4">
+         <VBox.margin>
+            <Insets top="5.0" />
+         </VBox.margin>
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+        <Label text=" into the root folder box." GridPane.columnIndex="0" GridPane.rowIndex="5">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+        <Label text="3. Add the year you want the files to be named with." GridPane.columnIndex="0" GridPane.rowIndex="6">
+         <VBox.margin>
+            <Insets bottom="5.0" top="5.0" />
+         </VBox.margin>
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <Label text="4. Run!">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+
+
+    </VBox>
+
+
+
+
+
+
+    <VBox prefWidth="416.0" GridPane.rowIndex="7">
+
+        <!-- 4 Digit Year -->
+        <Label text="4 Digit Year" GridPane.columnIndex="0" GridPane.rowIndex="0">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin></Label>
+        <TextField fx:id="fullYear" maxWidth="60" GridPane.columnIndex="0" GridPane.rowIndex="1">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin></TextField>
+
+        <!-- Root Folder -->
+        <Label text="Root Folder" GridPane.columnIndex="1" GridPane.rowIndex="0">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+        <TextField fx:id="rootFolder" prefWidth="200" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+
+        <!-- Run Button -->
+        <Button alignment="CENTER" minHeight="40.0" minWidth="80.0" onAction="#runProgramThenClose" text="Run" GridPane.columnIndex="0" GridPane.rowIndex="2">
+         <font>
+            <Font size="18.0" />
+         </font>
+         <VBox.margin>
+            <Insets top="20.0" />
+         </VBox.margin></Button>
+      <GridPane.margin>
+         <Insets bottom="15.0" />
+      </GridPane.margin>
+
+
+
+    </VBox>
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+      <RowConstraints maxHeight="0.0" minHeight="0.0" prefHeight="0.0" />
+   </rowConstraints>
+
+
+
+
+
+
+</GridPane>
