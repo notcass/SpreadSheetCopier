@@ -14,13 +14,13 @@ public class Controller {
     public void runProgramThenClose() {
 
 
-        main.Copy copy = new main.Copy(rootFolder.getText(), fullYear.getText());
-        copy.mkDirs();
-        copy.copyFiles();
+        Copier copier = new Copier(rootFolder.getText(), fullYear.getText());
+        copier.mkDirs();
+        copier.copyFiles();
 
         int fullYearInt = Integer.parseInt(fullYear.getText());
-        main.Rename rename = new main.Rename(rootFolder.getText(), fullYearInt);
-        rename.main();
+        Renamer renamer = new Renamer(rootFolder.getText(), fullYearInt);
+        renamer.main();
 
     }
 }

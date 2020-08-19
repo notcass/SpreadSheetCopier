@@ -4,7 +4,7 @@ package main;
 import java.io.File;
 
 
-public class Rename {
+public class Renamer {
     private final int fullYear;
     private String year;
     private final File rootFolder;
@@ -12,7 +12,7 @@ public class Rename {
 
 
 
-    public Rename(String rootFolder, int fullYear) {
+    public Renamer(String rootFolder, int fullYear) {
 
         this.rootFolder = new File(rootFolder + "\\Audit " + fullYear);
         this.monthFolders = this.rootFolder.listFiles();
