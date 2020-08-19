@@ -6,12 +6,20 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
+/*
+TODO
+    - Actual File browser to choose root
+    - "DONE" popup when complete
+
+ */
+
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setResizable(true);
+        primaryStage.setResizable(false);
         primaryStage.setTitle("Spreadsheet Copier");
         primaryStage.setScene(new Scene(root, 600, 500));
         primaryStage.show();
