@@ -35,7 +35,7 @@ public class Rename {
 
     public void main() {
 
-        for(int i = 0; i < monthFolders.length ; i++) {
+        for(int i = 0; i < monthFolders.length; i++) {
             this.monthFolders = this.rootFolder.listFiles();
             File[] days = monthFolders[i].listFiles();
             String monthName;
@@ -49,7 +49,7 @@ public class Rename {
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
-                    } else if (j < 40) {
+                    } else {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
@@ -65,7 +65,7 @@ public class Rename {
                 for (int j = 0; j < days.length; j++) {
                     if (j < 9) {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
-                    } else if (j < 40) {
+                    } else {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
@@ -82,7 +82,7 @@ public class Rename {
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
-                    } else if (j < 40) {
+                    } else {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
@@ -99,7 +99,7 @@ public class Rename {
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
-                    } else if (j < 40) {
+                    } else {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
@@ -116,7 +116,7 @@ public class Rename {
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
-                    } else if (j < 40) {
+                    } else {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
@@ -133,7 +133,7 @@ public class Rename {
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
-                    } else if (j < 40) {
+                    } else {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
@@ -151,7 +151,7 @@ public class Rename {
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
-                    } else if (j < 40) {
+                    } else {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
@@ -168,7 +168,7 @@ public class Rename {
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
-                    } else if (j < 40) {
+                    } else {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
@@ -185,7 +185,7 @@ public class Rename {
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
-                    } else if (j < 40) {
+                    } else {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
@@ -202,7 +202,7 @@ public class Rename {
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
-                    } else if (j < 40) {
+                    } else {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
@@ -219,7 +219,7 @@ public class Rename {
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
-                    } else if (j < 40) {
+                    } else {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
@@ -237,7 +237,7 @@ public class Rename {
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
-                    } else if (j < 40) {
+                    } else  {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
