@@ -6,7 +6,7 @@ import java.io.File;
 
 public class Renamer {
     private final int fullYear;
-    private String year;
+    private int year;
     private final File rootFolder;
     private File[] monthFolders;
 
@@ -22,11 +22,7 @@ public class Renamer {
             this.fullYear = 1000;
         } else {
             this.fullYear = fullYear;
-
-            // Getting last 2 digits of the year for use later
-            String fullYearToString = String.valueOf(this.fullYear);
-            int startInd = fullYearToString.length() - 2;
-            this.year = fullYearToString.substring(startInd);
+            this.year = fullYear % 100;
 
         }
 
