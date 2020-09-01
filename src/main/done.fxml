@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
-<AnchorPane prefHeight="146.0" prefWidth="271.0" xmlns="http://javafx.com/javafx/10.0.2-internal"
-            xmlns:fx="http://javafx.com/fxml/1">
-   <Label fx:id="errorTest" layoutX="120.0" layoutY="65.0" scaleX="2.0" scaleY="2.0" text="Done!"/>
-</AnchorPane>
