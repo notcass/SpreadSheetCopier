@@ -5,12 +5,12 @@ import org.apache.commons.io.IOUtils;
 import java.io.*;
 import java.nio.file.*;
 
-public class Copy {
+public class Copier {
     private File rootFolder;
     private final String fullYear;
 
 
-    public Copy(String rootFolder, String fullYear) {
+    public Copier(String rootFolder, String fullYear) {
         this.rootFolder = new File(rootFolder + "\\Audit " + fullYear);
         this.fullYear = fullYear;
     }
