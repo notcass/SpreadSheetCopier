@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
 
-public class Controller {
+public class MainSceneController {
 
     @FXML private TextField fullYear;
     @FXML private TextField rootFolder;
