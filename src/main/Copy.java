@@ -58,11 +58,8 @@ public class Copy {
 
             InputStream template = getClass().getClassLoader().getResourceAsStream("template.xls");
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
-
             IOUtils.copy(template, baos);
             byte[] bytes = baos.toByteArray();
-
-
 
             for(int month = 1; month < 13; month++) {
 
@@ -161,9 +158,6 @@ public class Copy {
 
 
         } catch (Exception e) {
-            System.out.println(e);
         }
-
-
     }
 }

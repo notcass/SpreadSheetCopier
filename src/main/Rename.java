@@ -237,7 +237,7 @@ public class Rename {
                 for (int j = 0; j < days.length; j++) {
                     if(j < 9) {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + "0" + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
-                    } else  {
+                    } else {
                         days[j].renameTo(new File(rootFolder + "\\" + monthName + (j + 1) + "-" + year + " DAILY WINGATE JE  V052218.xls"));
 
                     }
@@ -245,9 +245,6 @@ public class Rename {
                 }
 
             }
-
-
-
 
         }
 
