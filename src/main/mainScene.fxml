@@ -85,7 +85,7 @@
 
 
         <!-- Run Button -->
-        <Button alignment="CENTER" minHeight="40.0" minWidth="80.0" onAction="#runProgramThenClose" text="Run" GridPane.columnIndex="0" GridPane.rowIndex="2">
+        <Button alignment="CENTER" minHeight="40.0" minWidth="80.0" onAction="#runProgram" text="Run" GridPane.columnIndex="0" GridPane.rowIndex="2">
          <font>
             <Font size="18.0" />
          </font>

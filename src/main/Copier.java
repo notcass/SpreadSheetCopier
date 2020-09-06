@@ -15,7 +15,6 @@ public class Copier {
         this.fullYear = fullYear;
     }
 
-    // Make month folders at root location
     void mkDirs() {
         Path jan = Paths.get(rootFolder + "\\1 JAN " + fullYear);
         Path feb = Paths.get(rootFolder + "\\2 FEB " + fullYear);
